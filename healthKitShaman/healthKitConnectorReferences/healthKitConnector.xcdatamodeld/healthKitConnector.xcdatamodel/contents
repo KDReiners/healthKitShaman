@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="17709" systemVersion="20D91" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="YES" userDefinedModelVersionIdentifier="">
+    <entity name="Log" representedClassName="Log" syncable="YES">
+        <attribute name="timeStamp" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="value" optional="YES" attributeType="String"/>
+        <relationship name="log2source" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Source" inverseName="source2logs" inverseEntity="Source"/>
+    </entity>
+    <entity name="Source" representedClassName="Source" syncable="YES">
+        <attribute name="name" attributeType="String" defaultValueString="new source name"/>
+        <relationship name="source2logs" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Log" inverseName="log2source" inverseEntity="Log"/>
+    </entity>
+    <elements>
+        <element name="Log" positionX="-37.18359375" positionY="-86.73046875" width="128" height="74"/>
+        <element name="Source" positionX="-386.91796875" positionY="-140.46484375" width="128" height="59"/>
+    </elements>
+</model>
