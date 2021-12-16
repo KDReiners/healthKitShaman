@@ -45,6 +45,9 @@ struct DirectoryView: View
                         NavigationLink(sourceViewModel.items[i].hk_name ?? "", destination: PropertiesListView(detailObject: sourceViewModel, recordIndex: i), tag: sourceViewModel.items[i], selection: $select)
                     }
                 }
+                DisclosureGroup("Data Manager", isExpanded: $isExpanded) {
+                    NavigationLink("Xml-Import", destination: ImportView())
+                }
                 
             }
             .listStyle(SidebarListStyle())

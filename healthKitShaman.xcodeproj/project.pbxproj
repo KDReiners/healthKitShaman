@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2D06C63E26BC55A000B4C57C /* ViewBaseFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D06C63D26BC55A000B4C57C /* ViewBaseFoundation.swift */; };
+		2D0E5FFD2769230200C3EE10 /* ImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E5FFC2769230200C3EE10 /* ImportView.swift */; };
+		2D0E5FFF276A6D0B00C3EE10 /* HKImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E5FFE276A6D0B00C3EE10 /* HKImporter.swift */; };
 		2D188D0726C999C500C64E1B /* Aggregation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D188D0526C999C500C64E1B /* Aggregation+CoreDataProperties.swift */; };
 		2D188D0826C999C500C64E1B /* Aggregation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D188D0626C999C500C64E1B /* Aggregation+CoreDataClass.swift */; };
 		2D214AFF266E0FD70098C78A /* healthKitShamanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D214AFE266E0FD70098C78A /* healthKitShamanApp.swift */; };
@@ -24,6 +26,7 @@
 		2D2D3796274828B8003E6BC5 /* EntityAttributeInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2D3795274828B8003E6BC5 /* EntityAttributeInfo.swift */; };
 		2D2D37982748295B003E6BC5 /* BaseServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2D37972748295B003E6BC5 /* BaseServices.swift */; };
 		2D2D379C27482A70003E6BC5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2D379B27482A70003E6BC5 /* Constants.swift */; };
+		2D4AEE8A2763BC6500D5B081 /* DependantEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4AEE892763BC6500D5B081 /* DependantEntry.swift */; };
 		2D500D5B26C6F205001C7A84 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D500D5026C6F183001C7A84 /* Persistence.swift */; };
 		2D500D6626C6F3A1001C7A84 /* Device+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D500D5C26C6F3A1001C7A84 /* Device+CoreDataProperties.swift */; };
 		2D500D6726C6F3A1001C7A84 /* Quantitytype+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D500D5D26C6F3A1001C7A84 /* Quantitytype+CoreDataProperties.swift */; };
@@ -34,6 +37,7 @@
 		2D500D6C26C6F3A1001C7A84 /* Device+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D500D6226C6F3A1001C7A84 /* Device+CoreDataClass.swift */; };
 		2D500D6D26C6F3A1001C7A84 /* Source+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D500D6326C6F3A1001C7A84 /* Source+CoreDataProperties.swift */; };
 		2D500D6E26C6F3A1001C7A84 /* healthKitConnector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D500D6426C6F3A1001C7A84 /* healthKitConnector.xcdatamodeld */; };
+		2D5897F6274D781B002BD50A /* shaman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5897F5274D781B002BD50A /* shaman.swift */; };
 		2D6216092737E03E006778B0 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6216082737E03E006778B0 /* ViewModifiers.swift */; };
 		2D7FCD9626876977007C9FAF /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7FCD9526876977007C9FAF /* GroupView.swift */; };
 		2D822591272FEA5900E1B556 /* PropertiesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D822590272FEA5800E1B556 /* PropertiesListView.swift */; };
@@ -45,6 +49,9 @@
 		2DCF6CAD271193EF00A8E4E8 /* VariantTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF6CAC271193EF00A8E4E8 /* VariantTextFieldView.swift */; };
 		2DCF6CB32711B63F00A8E4E8 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF6CB22711B63F00A8E4E8 /* ListHeaderView.swift */; };
 		2DD1BCE2270642410013BDD4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD1BCE1270642410013BDD4 /* Extension.swift */; };
+		2DDFFAF427514B7C00539C25 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDFFAF327514B7C00539C25 /* CoreML.framework */; };
+		2DDFFAF627514B9100539C25 /* CreateML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDFFAF527514B9100539C25 /* CreateML.framework */; };
+		2DDFFAFA2754F86100539C25 /* TargetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFFAF92754F86100539C25 /* TargetEntry.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +73,8 @@
 
 /* Begin PBXFileReference section */
 		2D06C63D26BC55A000B4C57C /* ViewBaseFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBaseFoundation.swift; sourceTree = "<group>"; };
+		2D0E5FFC2769230200C3EE10 /* ImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportView.swift; sourceTree = "<group>"; };
+		2D0E5FFE276A6D0B00C3EE10 /* HKImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HKImporter.swift; sourceTree = "<group>"; };
 		2D188D0526C999C500C64E1B /* Aggregation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Aggregation+CoreDataProperties.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Aggregation+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2D188D0626C999C500C64E1B /* Aggregation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Aggregation+CoreDataClass.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Aggregation+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2D214AFB266E0FD70098C78A /* healthKitShaman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healthKitShaman.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +98,7 @@
 		2D2D3795274828B8003E6BC5 /* EntityAttributeInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityAttributeInfo.swift; sourceTree = "<group>"; };
 		2D2D37972748295B003E6BC5 /* BaseServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseServices.swift; sourceTree = "<group>"; };
 		2D2D379B27482A70003E6BC5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2D4AEE892763BC6500D5B081 /* DependantEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DependantEntry.swift; sourceTree = "<group>"; };
 		2D500D5026C6F183001C7A84 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Persistence.swift; path = ../../healthKitConnector/healthKitConnector/CoreData/Persistence.swift; sourceTree = "<group>"; };
 		2D500D5C26C6F3A1001C7A84 /* Device+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Device+CoreDataProperties.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Device+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2D500D5D26C6F3A1001C7A84 /* Quantitytype+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Quantitytype+CoreDataProperties.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Quantitytype+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -99,6 +109,7 @@
 		2D500D6226C6F3A1001C7A84 /* Device+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Device+CoreDataClass.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Device+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2D500D6326C6F3A1001C7A84 /* Source+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Source+CoreDataProperties.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Source+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		2D500D6526C6F3A1001C7A84 /* healthKitConnector.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = healthKitConnector.xcdatamodel; sourceTree = "<group>"; };
+		2D5897F5274D781B002BD50A /* shaman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shaman.swift; sourceTree = "<group>"; };
 		2D6216082737E03E006778B0 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		2D7FCD9526876977007C9FAF /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		2D822590272FEA5800E1B556 /* PropertiesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesListView.swift; sourceTree = "<group>"; };
@@ -112,6 +123,9 @@
 		2DCF6CAC271193EF00A8E4E8 /* VariantTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariantTextFieldView.swift; sourceTree = "<group>"; };
 		2DCF6CB22711B63F00A8E4E8 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
 		2DD1BCE1270642410013BDD4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		2DDFFAF327514B7C00539C25 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
+		2DDFFAF527514B9100539C25 /* CreateML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CreateML.framework; path = System/Library/Frameworks/CreateML.framework; sourceTree = SDKROOT; };
+		2DDFFAF92754F86100539C25 /* TargetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetEntry.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +133,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DDFFAF627514B9100539C25 /* CreateML.framework in Frameworks */,
+				2DDFFAF427514B7C00539C25 /* CoreML.framework in Frameworks */,
 				2D214B76266E161E0098C78A /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -150,6 +166,7 @@
 				2DCF6CB22711B63F00A8E4E8 /* ListHeaderView.swift */,
 				2D822590272FEA5800E1B556 /* PropertiesListView.swift */,
 				2D6216082737E03E006778B0 /* ViewModifiers.swift */,
+				2D0E5FFC2769230200C3EE10 /* ImportView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -180,9 +197,10 @@
 		2D214AFD266E0FD70098C78A /* healthKitShaman */ = {
 			isa = PBXGroup;
 			children = (
+				2D2D37852748253E003E6BC5 /* Classes */,
 				2D2D379A27482A42003E6BC5 /* Constants */,
 				2D500D4726C6F170001C7A84 /* CoreData */,
-				2D2D37852748253E003E6BC5 /* Classes */,
+				2D5897F4274D77C6002BD50A /* CoreML */,
 				2D2D3799274829D9003E6BC5 /* Enums */,
 				2D2D378C2748264D003E6BC5 /* GenericClasses */,
 				2D2D379127482784003E6BC5 /* Protocols */,
@@ -226,6 +244,8 @@
 		2D214B74266E161E0098C78A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2DDFFAF527514B9100539C25 /* CreateML.framework */,
+				2DDFFAF327514B7C00539C25 /* CoreML.framework */,
 				2D214B75266E161E0098C78A /* CloudKit.framework */,
 			);
 			name = Frameworks;
@@ -239,6 +259,7 @@
 				2D2D3788274825D8003E6BC5 /* DeviceModel.swift */,
 				2D2D378A27482622003E6BC5 /* QuantityTypeModel.swift */,
 				2D90F0CB27484BD100BF9F80 /* SourceView.swift */,
+				2D0E5FFE276A6D0B00C3EE10 /* HKImporter.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -265,6 +286,8 @@
 			children = (
 				2D2D3795274828B8003E6BC5 /* EntityAttributeInfo.swift */,
 				2D2D37972748295B003E6BC5 /* BaseServices.swift */,
+				2DDFFAF92754F86100539C25 /* TargetEntry.swift */,
+				2D4AEE892763BC6500D5B081 /* DependantEntry.swift */,
 			);
 			path = Structs;
 			sourceTree = "<group>";
@@ -302,6 +325,14 @@
 				2DD1BCE1270642410013BDD4 /* Extension.swift */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		2D5897F4274D77C6002BD50A /* CoreML */ = {
+			isa = PBXGroup;
+			children = (
+				2D5897F5274D781B002BD50A /* shaman.swift */,
+			);
+			path = CoreML;
 			sourceTree = "<group>";
 		};
 		2D97AF0B2701024500E1CBA8 /* healthKitShamanTests */ = {
@@ -456,6 +487,7 @@
 				2D500D5B26C6F205001C7A84 /* Persistence.swift in Sources */,
 				2D2BBA0826E7E3AA009299E8 /* DirectoryView.swift in Sources */,
 				2DCF6CAB2711919200A8E4E8 /* ContentView.swift in Sources */,
+				2D0E5FFF276A6D0B00C3EE10 /* HKImporter.swift in Sources */,
 				2D500D6826C6F3A1001C7A84 /* Log+CoreDataClass.swift in Sources */,
 				2D2D37902748271F003E6BC5 /* Storage.swift in Sources */,
 				2D188D0726C999C500C64E1B /* Aggregation+CoreDataProperties.swift in Sources */,
@@ -465,6 +497,7 @@
 				2DCF6CAD271193EF00A8E4E8 /* VariantTextFieldView.swift in Sources */,
 				2D2D3793274827BC003E6BC5 /* GenericViewModel.swift in Sources */,
 				2D500D6E26C6F3A1001C7A84 /* healthKitConnector.xcdatamodeld in Sources */,
+				2D4AEE8A2763BC6500D5B081 /* DependantEntry.swift in Sources */,
 				2D2D378B27482622003E6BC5 /* QuantityTypeModel.swift in Sources */,
 				2D500D6D26C6F3A1001C7A84 /* Source+CoreDataProperties.swift in Sources */,
 				2D2D378E27482677003E6BC5 /* Model.swift in Sources */,
@@ -474,6 +507,7 @@
 				2D500D6926C6F3A1001C7A84 /* Log+CoreDataProperties.swift in Sources */,
 				2D822591272FEA5900E1B556 /* PropertiesListView.swift in Sources */,
 				2D90F0CC27484BD200BF9F80 /* SourceView.swift in Sources */,
+				2D0E5FFD2769230200C3EE10 /* ImportView.swift in Sources */,
 				2D500D6626C6F3A1001C7A84 /* Device+CoreDataProperties.swift in Sources */,
 				2DD1BCE2270642410013BDD4 /* Extension.swift in Sources */,
 				2D500D6A26C6F3A1001C7A84 /* Quantitytype+CoreDataClass.swift in Sources */,
@@ -481,7 +515,9 @@
 				2D2D3789274825D8003E6BC5 /* DeviceModel.swift in Sources */,
 				2D6216092737E03E006778B0 /* ViewModifiers.swift in Sources */,
 				2DCF6CB32711B63F00A8E4E8 /* ListHeaderView.swift in Sources */,
+				2D5897F6274D781B002BD50A /* shaman.swift in Sources */,
 				2D2D37982748295B003E6BC5 /* BaseServices.swift in Sources */,
+				2DDFFAFA2754F86100539C25 /* TargetEntry.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
