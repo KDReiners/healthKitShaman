@@ -52,6 +52,7 @@
 		2DDFFAF427514B7C00539C25 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDFFAF327514B7C00539C25 /* CoreML.framework */; };
 		2DDFFAF627514B9100539C25 /* CreateML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDFFAF527514B9100539C25 /* CreateML.framework */; };
 		2DDFFAFA2754F86100539C25 /* TargetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFFAF92754F86100539C25 /* TargetEntry.swift */; };
+		2DF8C6EE276BAA1700988AFE /* shaman.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8C6EC276BAA1700988AFE /* shaman.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -126,6 +127,7 @@
 		2DDFFAF327514B7C00539C25 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 		2DDFFAF527514B9100539C25 /* CreateML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CreateML.framework; path = System/Library/Frameworks/CreateML.framework; sourceTree = SDKROOT; };
 		2DDFFAF92754F86100539C25 /* TargetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetEntry.swift; sourceTree = "<group>"; };
+		2DF8C6ED276BAA1700988AFE /* shaman.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = shaman.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -330,6 +332,7 @@
 		2D5897F4274D77C6002BD50A /* CoreML */ = {
 			isa = PBXGroup;
 			children = (
+				2DF8C6EF276BABBB00988AFE /* CoreData */,
 				2D5897F5274D781B002BD50A /* shaman.swift */,
 			);
 			path = CoreML;
@@ -350,6 +353,14 @@
 				2D97AF1B2701029700E1CBA8 /* healthKitShamanUITestsLaunchTests.swift */,
 			);
 			path = healthKitShamanUITests;
+			sourceTree = "<group>";
+		};
+		2DF8C6EF276BABBB00988AFE /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				2DF8C6EC276BAA1700988AFE /* shaman.xcdatamodeld */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -498,6 +509,7 @@
 				2D2D3793274827BC003E6BC5 /* GenericViewModel.swift in Sources */,
 				2D500D6E26C6F3A1001C7A84 /* healthKitConnector.xcdatamodeld in Sources */,
 				2D4AEE8A2763BC6500D5B081 /* DependantEntry.swift in Sources */,
+				2DF8C6EE276BAA1700988AFE /* shaman.xcdatamodeld in Sources */,
 				2D2D378B27482622003E6BC5 /* QuantityTypeModel.swift in Sources */,
 				2D500D6D26C6F3A1001C7A84 /* Source+CoreDataProperties.swift in Sources */,
 				2D2D378E27482677003E6BC5 /* Model.swift in Sources */,
@@ -863,6 +875,16 @@
 			currentVersion = 2D500D6526C6F3A1001C7A84 /* healthKitConnector.xcdatamodel */;
 			name = healthKitConnector.xcdatamodeld;
 			path = ../../healthKitConnector/healthKitConnector/CoreData/healthKitConnector.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		2DF8C6EC276BAA1700988AFE /* shaman.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2DF8C6ED276BAA1700988AFE /* shaman.xcdatamodel */,
+			);
+			currentVersion = 2DF8C6ED276BAA1700988AFE /* shaman.xcdatamodel */;
+			path = shaman.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

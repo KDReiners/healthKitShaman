@@ -8,7 +8,7 @@ import CoreData
 import Combine
 class Model<T>: GenericViewModel where T: NSManagedObject {
     var items: [T] = []
-    let context = PersistenceController.shared.container.viewContext
+    let context = PersistenceController.shared.cloudContainer.viewContext
     var attributes: Array<EntityAttributeInfo> = BaseServices.getAttributesForEntity(entity: T.self.entity())
     var readOnlyAttributes: Array<EntityAttributeInfo> = []
     var readWriteAttributes: Array<EntityAttributeInfo> = []

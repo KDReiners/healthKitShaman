@@ -19,11 +19,11 @@ class Storage<T>: NSObject, ObservableObject, NSFetchedResultsControllerDelegate
             fatalError("Can't set up NSFetchRequest")
         }
         request.sortDescriptors = []
-            let tmp = NSFetchedResultsController<T>(fetchRequest: request, managedObjectContext: PersistenceController.shared.container.viewContext, sectionNameKeyPath: nil, cacheName: nil)
+            let tmp = NSFetchedResultsController<T>(fetchRequest: request, managedObjectContext: PersistenceController.shared.cloudContainer.viewContext, sectionNameKeyPath: nil, cacheName: nil)
             return tmp
         }()
     override init() {
-        context = PersistenceController.shared.container.viewContext
+        context = PersistenceController.shared.cloudContainer.viewContext
         super.init()
         fetchController.delegate = self
         do {

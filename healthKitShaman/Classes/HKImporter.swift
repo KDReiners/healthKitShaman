@@ -8,7 +8,7 @@
 //
 
 import Foundation
-
+import CoreData
 
 extension CustomStringConvertible {
     var description : String {
@@ -50,7 +50,7 @@ class HKRecord: CustomStringConvertible {
 
 class HKimporter : NSObject, XMLParserDelegate {
 
-    
+    let moc = PersistenceController.shared.localContainer.viewContext
     var allHKRecords: [HKRecord] = []
     
     var eName: String = String()
@@ -60,7 +60,6 @@ class HKimporter : NSObject, XMLParserDelegate {
     
     
     convenience init(completion:@escaping ()->Void) {
-
         self.init()
     }
 
@@ -129,8 +128,8 @@ class HKimporter : NSObject, XMLParserDelegate {
     
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "Record" || elementName == "Workout" {
-
             allHKRecords.append(currRecord)
+            storeInPrimaNota(input: currRecord)
             print(currRecord.description)
             DispatchQueue.main.async {
 //                self.readCounterLabel?.text = "\(self.allHKRecords.count)"
@@ -143,5 +142,17 @@ class HKimporter : NSObject, XMLParserDelegate {
                 print("fail to process record")
             }) */
         }
+    }
+    func storeInPrimaNota(input: HKRecord) -> Void {
+        var entry = PrimaNota(context: moc)
+        entry.type = input.type
+        entry.value = input.value
+        entry.unit = input.unit
+        entry.sourceName = input.sourceName
+        entry.sourceVersion = input.sourceVersion
+        entry.startDate = input.startDate
+        entry.endDate = input.endDate
+        entry.creationDate = input.creationDate
+        try? moc.save()
     }
 }
