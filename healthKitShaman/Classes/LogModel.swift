@@ -19,7 +19,14 @@ class LogModel: Model<Log> {
     }
     override var items: [Log] {
         get {
-            return result
+            return result.filter { log in
+                if log.log2quantitytype == nil || log.log2Device == nil || log.log2source == nil {
+                    return false
+                }
+                else {
+                    return true
+                }
+            }
         }
         set
         {
@@ -30,7 +37,7 @@ class LogModel: Model<Log> {
         var attachedLogs = [Log]()
         let targetLogs = logs.filter{ log in
             if let hk_quantitytype = log.log2quantitytype?.hk_quantitytype {
-                return (hk_quantitytype.contains("BloodGlucose"))
+                return (hk_quantitytype.contains("Burned"))
             }
             else {
                 return false

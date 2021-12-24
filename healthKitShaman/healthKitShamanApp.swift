@@ -9,10 +9,12 @@ import SwiftUI
 
 @main
 struct healthKitShamanApp: App {
+    
     @ObservedObject var logViewModel = LogModel()
-    @ObservedObject var quantityTypeViewModel = QuantityTypeModel()
-    @ObservedObject var deviceViewModel = DeviceModel()
     @ObservedObject var sourceViewModel = SourceModel()
+    @ObservedObject var deviceViewModel = DeviceModel()
+    @ObservedObject var quantityTypeViewModel = QuantityTypeModel()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -36,7 +36,6 @@
 		2D500D6B26C6F3A1001C7A84 /* Source+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D500D6126C6F3A1001C7A84 /* Source+CoreDataClass.swift */; };
 		2D500D6C26C6F3A1001C7A84 /* Device+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D500D6226C6F3A1001C7A84 /* Device+CoreDataClass.swift */; };
 		2D500D6D26C6F3A1001C7A84 /* Source+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D500D6326C6F3A1001C7A84 /* Source+CoreDataProperties.swift */; };
-		2D500D6E26C6F3A1001C7A84 /* healthKitConnector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2D500D6426C6F3A1001C7A84 /* healthKitConnector.xcdatamodeld */; };
 		2D5897F6274D781B002BD50A /* shaman.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D5897F5274D781B002BD50A /* shaman.swift */; };
 		2D6216092737E03E006778B0 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6216082737E03E006778B0 /* ViewModifiers.swift */; };
 		2D7FCD9626876977007C9FAF /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7FCD9526876977007C9FAF /* GroupView.swift */; };
@@ -49,6 +48,8 @@
 		2DCF6CAD271193EF00A8E4E8 /* VariantTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF6CAC271193EF00A8E4E8 /* VariantTextFieldView.swift */; };
 		2DCF6CB32711B63F00A8E4E8 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF6CB22711B63F00A8E4E8 /* ListHeaderView.swift */; };
 		2DD1BCE2270642410013BDD4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD1BCE1270642410013BDD4 /* Extension.swift */; };
+		2DD37551277268C700989D87 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD37550277268C700989D87 /* StartView.swift */; };
+		2DD375562773BD1300989D87 /* healthKitConnector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DD375522773BD1300989D87 /* healthKitConnector.xcdatamodeld */; };
 		2DDFFAF427514B7C00539C25 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDFFAF327514B7C00539C25 /* CoreML.framework */; };
 		2DDFFAF627514B9100539C25 /* CreateML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDFFAF527514B9100539C25 /* CreateML.framework */; };
 		2DDFFAFA2754F86100539C25 /* TargetEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DDFFAF92754F86100539C25 /* TargetEntry.swift */; };
@@ -109,7 +110,6 @@
 		2D500D6126C6F3A1001C7A84 /* Source+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Source+CoreDataClass.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Source+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2D500D6226C6F3A1001C7A84 /* Device+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Device+CoreDataClass.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Device+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2D500D6326C6F3A1001C7A84 /* Source+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Source+CoreDataProperties.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Source+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2D500D6526C6F3A1001C7A84 /* healthKitConnector.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = healthKitConnector.xcdatamodel; sourceTree = "<group>"; };
 		2D5897F5274D781B002BD50A /* shaman.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = shaman.swift; sourceTree = "<group>"; };
 		2D6216082737E03E006778B0 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		2D7FCD9526876977007C9FAF /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
@@ -124,6 +124,10 @@
 		2DCF6CAC271193EF00A8E4E8 /* VariantTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariantTextFieldView.swift; sourceTree = "<group>"; };
 		2DCF6CB22711B63F00A8E4E8 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
 		2DD1BCE1270642410013BDD4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		2DD37550277268C700989D87 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		2DD375532773BD1300989D87 /* healthKitConnector.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = healthKitConnector.xcdatamodel; sourceTree = "<group>"; };
+		2DD375542773BD1300989D87 /* healthKitConnector 3.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "healthKitConnector 3.xcdatamodel"; sourceTree = "<group>"; };
+		2DD375552773BD1300989D87 /* healthKitConnector 2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "healthKitConnector 2.xcdatamodel"; sourceTree = "<group>"; };
 		2DDFFAF327514B7C00539C25 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 		2DDFFAF527514B9100539C25 /* CreateML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CreateML.framework; path = System/Library/Frameworks/CreateML.framework; sourceTree = SDKROOT; };
 		2DDFFAF92754F86100539C25 /* TargetEntry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TargetEntry.swift; sourceTree = "<group>"; };
@@ -169,6 +173,7 @@
 				2D822590272FEA5800E1B556 /* PropertiesListView.swift */,
 				2D6216082737E03E006778B0 /* ViewModifiers.swift */,
 				2D0E5FFC2769230200C3EE10 /* ImportView.swift */,
+				2DD37550277268C700989D87 /* StartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -312,6 +317,7 @@
 		2D500D4726C6F170001C7A84 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				2DD375522773BD1300989D87 /* healthKitConnector.xcdatamodeld */,
 				2D188D0626C999C500C64E1B /* Aggregation+CoreDataClass.swift */,
 				2D188D0526C999C500C64E1B /* Aggregation+CoreDataProperties.swift */,
 				2D500D6226C6F3A1001C7A84 /* Device+CoreDataClass.swift */,
@@ -323,7 +329,6 @@
 				2D500D6126C6F3A1001C7A84 /* Source+CoreDataClass.swift */,
 				2D500D6326C6F3A1001C7A84 /* Source+CoreDataProperties.swift */,
 				2D500D5026C6F183001C7A84 /* Persistence.swift */,
-				2D500D6426C6F3A1001C7A84 /* healthKitConnector.xcdatamodeld */,
 				2DD1BCE1270642410013BDD4 /* Extension.swift */,
 			);
 			name = CoreData;
@@ -498,6 +503,7 @@
 				2D500D5B26C6F205001C7A84 /* Persistence.swift in Sources */,
 				2D2BBA0826E7E3AA009299E8 /* DirectoryView.swift in Sources */,
 				2DCF6CAB2711919200A8E4E8 /* ContentView.swift in Sources */,
+				2DD375562773BD1300989D87 /* healthKitConnector.xcdatamodeld in Sources */,
 				2D0E5FFF276A6D0B00C3EE10 /* HKImporter.swift in Sources */,
 				2D500D6826C6F3A1001C7A84 /* Log+CoreDataClass.swift in Sources */,
 				2D2D37902748271F003E6BC5 /* Storage.swift in Sources */,
@@ -507,9 +513,9 @@
 				2D500D6C26C6F3A1001C7A84 /* Device+CoreDataClass.swift in Sources */,
 				2DCF6CAD271193EF00A8E4E8 /* VariantTextFieldView.swift in Sources */,
 				2D2D3793274827BC003E6BC5 /* GenericViewModel.swift in Sources */,
-				2D500D6E26C6F3A1001C7A84 /* healthKitConnector.xcdatamodeld in Sources */,
 				2D4AEE8A2763BC6500D5B081 /* DependantEntry.swift in Sources */,
 				2DF8C6EE276BAA1700988AFE /* shaman.xcdatamodeld in Sources */,
+				2DD37551277268C700989D87 /* StartView.swift in Sources */,
 				2D2D378B27482622003E6BC5 /* QuantityTypeModel.swift in Sources */,
 				2D500D6D26C6F3A1001C7A84 /* Source+CoreDataProperties.swift in Sources */,
 				2D2D378E27482677003E6BC5 /* Model.swift in Sources */,
@@ -867,14 +873,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		2D500D6426C6F3A1001C7A84 /* healthKitConnector.xcdatamodeld */ = {
+		2DD375522773BD1300989D87 /* healthKitConnector.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				2D500D6526C6F3A1001C7A84 /* healthKitConnector.xcdatamodel */,
+				2DD375532773BD1300989D87 /* healthKitConnector.xcdatamodel */,
+				2DD375542773BD1300989D87 /* healthKitConnector 3.xcdatamodel */,
+				2DD375552773BD1300989D87 /* healthKitConnector 2.xcdatamodel */,
 			);
-			currentVersion = 2D500D6526C6F3A1001C7A84 /* healthKitConnector.xcdatamodel */;
-			name = healthKitConnector.xcdatamodeld;
-			path = ../../healthKitConnector/healthKitConnector/CoreData/healthKitConnector.xcdatamodeld;
+			currentVersion = 2DD375532773BD1300989D87 /* healthKitConnector.xcdatamodel */;
+			path = healthKitConnector.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

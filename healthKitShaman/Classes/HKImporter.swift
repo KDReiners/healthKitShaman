@@ -129,8 +129,9 @@ class HKimporter : NSObject, XMLParserDelegate {
     func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
         if elementName == "Record" || elementName == "Workout" {
             allHKRecords.append(currRecord)
-            storeInPrimaNota(input: currRecord)
-            print(currRecord.description)
+            print(allHKRecords.count)
+//            storeInPrimaNota(input: currRecord)
+//            print(currRecord.description)
             DispatchQueue.main.async {
 //                self.readCounterLabel?.text = "\(self.allHKRecords.count)"
             }
