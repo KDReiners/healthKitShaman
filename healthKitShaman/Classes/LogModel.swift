@@ -20,14 +20,6 @@ class LogModel: Model<Log> {
     override var items: [Log] {
         get {
             return result
-//            return result.filter { log in
-//                if log.log2quantitytype == nil || log.log2Device == nil || log.log2source == nil {
-//                    return false
-//                }
-//                else {
-//                    return true
-//                }
-//            }
         }
         set
         {

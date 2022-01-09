@@ -16,14 +16,7 @@ class DeviceModel: Model<Device> {
     }
     override var items: [Device] {
         get {
-            return result.filter { device in
-                if device.device2Logs == nil {
-                    return false
-                }
-                else {
-                    return true
-                }
-            }
+            return result
         }
         set
         {

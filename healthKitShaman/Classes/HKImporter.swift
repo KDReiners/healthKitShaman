@@ -145,7 +145,7 @@ class HKimporter : NSObject, XMLParserDelegate {
         }
     }
     func storeInPrimaNota(input: HKRecord) -> Void {
-        var entry = PrimaNota(context: moc)
+        let entry = PrimaNota(context: moc)
         entry.type = input.type
         entry.value = input.value
         entry.unit = input.unit

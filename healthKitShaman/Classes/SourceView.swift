@@ -15,14 +15,7 @@ class SourceModel: Model<Source> {
     }
     override var items: [Source] {
         get {
-            return result.filter { source in
-                if source.source2logs == nil {
-                    return false
-                }
-                else {
-                    return true
-                }
-            }
+            return result
         }
         set
         {
