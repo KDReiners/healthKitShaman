@@ -14,14 +14,15 @@ class QuantityTypeModel: Model<Quantitytype> {
     }
     override var items: [Quantitytype] {
         get {
-            return result.filter{ quantityType in
-                if quantityType.quantitytype2logs == nil {
-                    return false
-                }
-                else {
-                    return true
-                }
-            }
+            return result
+//            return result.filter{ quantityType in
+//                if quantityType.quantitytype2logs == nil {
+//                    return false
+//                }
+//                else {
+//                    return true
+//                }
+//            }
         }
         set
         {

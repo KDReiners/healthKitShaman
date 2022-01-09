@@ -32,13 +32,16 @@ class LogModel: Model<Log> {
         set
         {
             result = newValue.sorted(by: { $1.timeStamp! > $0.timeStamp! })
+            fillCategories(items)
+            fillRelations()
         }
     }
     private func fillCategories(_ logs: [Log]) {
+        self.categories.removeAll()
         var attachedLogs = [Log]()
         let targetLogs = logs.filter{ log in
             if let hk_quantitytype = log.log2quantitytype?.hk_quantitytype {
-                return (hk_quantitytype.contains("Burned"))
+                return (hk_quantitytype.contains("Glucose"))
             }
             else {
                 return false
@@ -48,7 +51,7 @@ class LogModel: Model<Log> {
             var newTree = Tree(value: log, children: [Tree<Log>]())
             let children = logs.filter { subLog in
                 return ( subLog.log2quantitytype?.hk_quantitytype != log.log2quantitytype?.hk_quantitytype
-                            && subLog.timeStamp! < log.timeStamp! && attachedLogs.contains(subLog) == false)
+                            && subLog.timeStamp == log.timeStamp! && attachedLogs.contains(subLog) == false)
             }
             children.forEach { child in
                 attachedLogs.append(child)
