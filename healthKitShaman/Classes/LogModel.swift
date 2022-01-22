@@ -14,8 +14,6 @@ class LogModel: Model<Log> {
     init() {
         let readOnlyFields = [""]
         super.init(readOnlyFields: readOnlyFields)
-        fillCategories(items)
-        fillRelations()
     }
     override var items: [Log] {
         get {
@@ -45,6 +43,7 @@ class LogModel: Model<Log> {
                 return ( subLog.log2quantitytype?.hk_quantitytype != log.log2quantitytype?.hk_quantitytype
                             && subLog.timeStamp == log.timeStamp! && attachedLogs.contains(subLog) == false)
             }
+            attachedLogs.removeAll()
             children.forEach { child in
                 attachedLogs.append(child)
                 let childTree = Tree( value: child)
@@ -57,10 +56,20 @@ class LogModel: Model<Log> {
         var attachedSources = Set<Source>()
         var attachedQuantityTypes = Set<Quantitytype>()
         var attachedDevices = Set<Device>()
+//        items.forEach { log in
+//            print("Log Liste: \(log.uuid?.uuidString ?? "unbekannte uuid")")
+//        }
+//        print("*******************************")
         items.forEach {log in
-            attachedSources.insert(log.log2source!)
-            attachedQuantityTypes.insert(log.log2quantitytype!)
-            attachedDevices.insert(log.log2Device!)
+//            print("Log Anfang: \(log.uuid?.uuidString ?? "unbekannte uuid")")
+            if log.log2source != nil && log.log2quantitytype != nil && log.log2Device != nil {
+                attachedSources.insert(log.log2source!)
+                attachedQuantityTypes.insert(log.log2quantitytype!)
+                attachedDevices.insert(log.log2Device!)
+            }
+            else {
+                print(log)
+            }
         }
         self.sources = Array(attachedSources.sorted(by: { $0.hk_name ?? "" < $1.hk_name ?? ""}))
         self.devices = Array(attachedDevices.sorted(by: { $0.hk_name ?? "" < $1.hk_name ?? "" }))

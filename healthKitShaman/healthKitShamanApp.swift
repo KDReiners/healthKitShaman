@@ -11,17 +11,17 @@ import SwiftUI
 struct healthKitShamanApp: App {
     
     @ObservedObject var logViewModel = LogModel()
+    @ObservedObject var quantityTypeViewModel = QuantityTypeModel()
     @ObservedObject var sourceViewModel = SourceModel()
     @ObservedObject var deviceViewModel = DeviceModel()
-    @ObservedObject var quantityTypeViewModel = QuantityTypeModel()
-    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(logViewModel)
                 .environmentObject(quantityTypeViewModel)
-                .environmentObject(deviceViewModel)
                 .environmentObject(sourceViewModel)
+                .environmentObject(deviceViewModel)
+                
             
         }
         .commands {
