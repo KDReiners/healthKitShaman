@@ -33,22 +33,20 @@
 		2D97AF0D2701024500E1CBA8 /* healthKitShamanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D97AF0C2701024500E1CBA8 /* healthKitShamanTests.swift */; };
 		2D97AF1A2701029700E1CBA8 /* healthKitShamanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D97AF192701029700E1CBA8 /* healthKitShamanUITests.swift */; };
 		2D97AF1C2701029700E1CBA8 /* healthKitShamanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D97AF1B2701029700E1CBA8 /* healthKitShamanUITestsLaunchTests.swift */; };
-		2DBA089627778D3A0020BCC9 /* Aggregation+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA088A27778D390020BCC9 /* Aggregation+CoreDataClass.swift */; };
-		2DBA089727778D3A0020BCC9 /* Device+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA088B27778D390020BCC9 /* Device+CoreDataProperties.swift */; };
-		2DBA089827778D3A0020BCC9 /* Source+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA088C27778D390020BCC9 /* Source+CoreDataClass.swift */; };
-		2DBA089927778D3A0020BCC9 /* Aggregation+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA088D27778D390020BCC9 /* Aggregation+CoreDataProperties.swift */; };
-		2DBA089A27778D3A0020BCC9 /* Log+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA088E27778D390020BCC9 /* Log+CoreDataClass.swift */; };
 		2DBA089B27778D3A0020BCC9 /* healthKitConnector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA088F27778D390020BCC9 /* healthKitConnector.xcdatamodeld */; };
-		2DBA089C27778D3A0020BCC9 /* Quantitytype+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA089127778D390020BCC9 /* Quantitytype+CoreDataProperties.swift */; };
-		2DBA089D27778D3A0020BCC9 /* Source+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA089227778D390020BCC9 /* Source+CoreDataProperties.swift */; };
-		2DBA089E27778D3A0020BCC9 /* Device+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA089327778D390020BCC9 /* Device+CoreDataClass.swift */; };
-		2DBA089F27778D3A0020BCC9 /* Log+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA089427778D390020BCC9 /* Log+CoreDataProperties.swift */; };
-		2DBA08A027778D3A0020BCC9 /* Quantitytype+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA089527778D3A0020BCC9 /* Quantitytype+CoreDataClass.swift */; };
 		2DCF6CAB2711919200A8E4E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF6CAA2711919200A8E4E8 /* ContentView.swift */; };
 		2DCF6CAD271193EF00A8E4E8 /* VariantTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF6CAC271193EF00A8E4E8 /* VariantTextFieldView.swift */; };
 		2DCF6CB32711B63F00A8E4E8 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF6CB22711B63F00A8E4E8 /* ListHeaderView.swift */; };
 		2DD1BCE2270642410013BDD4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD1BCE1270642410013BDD4 /* Extension.swift */; };
 		2DD37551277268C700989D87 /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD37550277268C700989D87 /* StartView.swift */; };
+		2DD78504279C77C800B6DA63 /* Quantitytype+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD784FC279C77C700B6DA63 /* Quantitytype+CoreDataClass.swift */; };
+		2DD78505279C77C800B6DA63 /* Device+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD784FD279C77C700B6DA63 /* Device+CoreDataProperties.swift */; };
+		2DD78506279C77C800B6DA63 /* Source+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD784FE279C77C700B6DA63 /* Source+CoreDataProperties.swift */; };
+		2DD78507279C77C800B6DA63 /* Log+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD784FF279C77C700B6DA63 /* Log+CoreDataClass.swift */; };
+		2DD78508279C77C800B6DA63 /* Log+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD78500279C77C700B6DA63 /* Log+CoreDataProperties.swift */; };
+		2DD78509279C77C800B6DA63 /* Quantitytype+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD78501279C77C700B6DA63 /* Quantitytype+CoreDataProperties.swift */; };
+		2DD7850A279C77C800B6DA63 /* Device+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD78502279C77C800B6DA63 /* Device+CoreDataClass.swift */; };
+		2DD7850B279C77C800B6DA63 /* Source+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD78503279C77C800B6DA63 /* Source+CoreDataClass.swift */; };
 		2DDFFAF427514B7C00539C25 /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDFFAF327514B7C00539C25 /* CoreML.framework */; };
 		2DDFFAF627514B9100539C25 /* CreateML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DDFFAF527514B9100539C25 /* CreateML.framework */; };
 		2DF8C6EE276BAA1700988AFE /* shaman.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8C6EC276BAA1700988AFE /* shaman.xcdatamodeld */; };
@@ -107,22 +105,20 @@
 		2D97AF172701029700E1CBA8 /* healthKitShamanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = healthKitShamanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D97AF192701029700E1CBA8 /* healthKitShamanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthKitShamanUITests.swift; sourceTree = "<group>"; };
 		2D97AF1B2701029700E1CBA8 /* healthKitShamanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthKitShamanUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		2DBA088A27778D390020BCC9 /* Aggregation+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Aggregation+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2DBA088B27778D390020BCC9 /* Device+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2DBA088C27778D390020BCC9 /* Source+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Source+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2DBA088D27778D390020BCC9 /* Aggregation+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Aggregation+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2DBA088E27778D390020BCC9 /* Log+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2DBA089027778D390020BCC9 /* healthKitConnector.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = healthKitConnector.xcdatamodel; sourceTree = "<group>"; };
-		2DBA089127778D390020BCC9 /* Quantitytype+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Quantitytype+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2DBA089227778D390020BCC9 /* Source+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Source+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2DBA089327778D390020BCC9 /* Device+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Device+CoreDataClass.swift"; sourceTree = "<group>"; };
-		2DBA089427778D390020BCC9 /* Log+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Log+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		2DBA089527778D3A0020BCC9 /* Quantitytype+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Quantitytype+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2DCF6CAA2711919200A8E4E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2DCF6CAC271193EF00A8E4E8 /* VariantTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariantTextFieldView.swift; sourceTree = "<group>"; };
 		2DCF6CB22711B63F00A8E4E8 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
 		2DD1BCE1270642410013BDD4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		2DD37550277268C700989D87 /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		2DD784FC279C77C700B6DA63 /* Quantitytype+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Quantitytype+CoreDataClass.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Quantitytype+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2DD784FD279C77C700B6DA63 /* Device+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Device+CoreDataProperties.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Device+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2DD784FE279C77C700B6DA63 /* Source+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Source+CoreDataProperties.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Source+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2DD784FF279C77C700B6DA63 /* Log+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Log+CoreDataClass.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Log+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2DD78500279C77C700B6DA63 /* Log+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Log+CoreDataProperties.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Log+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2DD78501279C77C700B6DA63 /* Quantitytype+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Quantitytype+CoreDataProperties.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Quantitytype+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		2DD78502279C77C800B6DA63 /* Device+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Device+CoreDataClass.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Device+CoreDataClass.swift"; sourceTree = "<group>"; };
+		2DD78503279C77C800B6DA63 /* Source+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Source+CoreDataClass.swift"; path = "../../healthKitConnector/healthKitConnector/CoreData/Source+CoreDataClass.swift"; sourceTree = "<group>"; };
 		2DDFFAF327514B7C00539C25 /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
 		2DDFFAF527514B9100539C25 /* CreateML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CreateML.framework; path = System/Library/Frameworks/CreateML.framework; sourceTree = SDKROOT; };
 		2DF8C6ED276BAA1700988AFE /* shaman.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = shaman.xcdatamodel; sourceTree = "<group>"; };
@@ -310,17 +306,15 @@
 		2D500D4726C6F170001C7A84 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				2DBA088A27778D390020BCC9 /* Aggregation+CoreDataClass.swift */,
-				2DBA088D27778D390020BCC9 /* Aggregation+CoreDataProperties.swift */,
-				2DBA089327778D390020BCC9 /* Device+CoreDataClass.swift */,
-				2DBA088B27778D390020BCC9 /* Device+CoreDataProperties.swift */,
 				2DBA088F27778D390020BCC9 /* healthKitConnector.xcdatamodeld */,
-				2DBA088E27778D390020BCC9 /* Log+CoreDataClass.swift */,
-				2DBA089427778D390020BCC9 /* Log+CoreDataProperties.swift */,
-				2DBA089527778D3A0020BCC9 /* Quantitytype+CoreDataClass.swift */,
-				2DBA089127778D390020BCC9 /* Quantitytype+CoreDataProperties.swift */,
-				2DBA088C27778D390020BCC9 /* Source+CoreDataClass.swift */,
-				2DBA089227778D390020BCC9 /* Source+CoreDataProperties.swift */,
+				2DD784FC279C77C700B6DA63 /* Quantitytype+CoreDataClass.swift */,
+				2DD78501279C77C700B6DA63 /* Quantitytype+CoreDataProperties.swift */,
+				2DD784FF279C77C700B6DA63 /* Log+CoreDataClass.swift */,
+				2DD78500279C77C700B6DA63 /* Log+CoreDataProperties.swift */,
+				2DD78502279C77C800B6DA63 /* Device+CoreDataClass.swift */,
+				2DD784FD279C77C700B6DA63 /* Device+CoreDataProperties.swift */,
+				2DD78503279C77C800B6DA63 /* Source+CoreDataClass.swift */,
+				2DD784FE279C77C700B6DA63 /* Source+CoreDataProperties.swift */,
 				2D500D5026C6F183001C7A84 /* Persistence.swift */,
 				2DD1BCE1270642410013BDD4 /* Extension.swift */,
 			);
@@ -491,41 +485,39 @@
 			files = (
 				2D2D378727482578003E6BC5 /* LogModel.swift in Sources */,
 				2D2D379C27482A70003E6BC5 /* Constants.swift in Sources */,
-				2DBA089D27778D3A0020BCC9 /* Source+CoreDataProperties.swift in Sources */,
-				2DBA089C27778D3A0020BCC9 /* Quantitytype+CoreDataProperties.swift in Sources */,
-				2DBA089927778D3A0020BCC9 /* Aggregation+CoreDataProperties.swift in Sources */,
 				2D2D3796274828B8003E6BC5 /* EntityAttributeInfo.swift in Sources */,
 				2DBA089B27778D3A0020BCC9 /* healthKitConnector.xcdatamodeld in Sources */,
 				2D500D5B26C6F205001C7A84 /* Persistence.swift in Sources */,
 				2D2BBA0826E7E3AA009299E8 /* DirectoryView.swift in Sources */,
-				2DBA089827778D3A0020BCC9 /* Source+CoreDataClass.swift in Sources */,
 				2DCF6CAB2711919200A8E4E8 /* ContentView.swift in Sources */,
 				2D0E5FFF276A6D0B00C3EE10 /* HKImporter.swift in Sources */,
-				2DBA089727778D3A0020BCC9 /* Device+CoreDataProperties.swift in Sources */,
 				2D2D37902748271F003E6BC5 /* Storage.swift in Sources */,
 				2D7FCD9626876977007C9FAF /* GroupView.swift in Sources */,
 				2DCF6CAD271193EF00A8E4E8 /* VariantTextFieldView.swift in Sources */,
 				2D2D3793274827BC003E6BC5 /* GenericViewModel.swift in Sources */,
 				2D4AEE8A2763BC6500D5B081 /* DependantEntry.swift in Sources */,
+				2DD7850A279C77C800B6DA63 /* Device+CoreDataClass.swift in Sources */,
 				2DF8C6EE276BAA1700988AFE /* shaman.xcdatamodeld in Sources */,
-				2DBA089A27778D3A0020BCC9 /* Log+CoreDataClass.swift in Sources */,
+				2DD78507279C77C800B6DA63 /* Log+CoreDataClass.swift in Sources */,
 				2DD37551277268C700989D87 /* StartView.swift in Sources */,
+				2DD78509279C77C800B6DA63 /* Quantitytype+CoreDataProperties.swift in Sources */,
 				2D2D378B27482622003E6BC5 /* QuantityTypeModel.swift in Sources */,
-				2DBA089F27778D3A0020BCC9 /* Log+CoreDataProperties.swift in Sources */,
 				2D2D378E27482677003E6BC5 /* Model.swift in Sources */,
 				2D06C63E26BC55A000B4C57C /* ViewBaseFoundation.swift in Sources */,
 				2D822591272FEA5900E1B556 /* PropertiesListView.swift in Sources */,
+				2DD78508279C77C800B6DA63 /* Log+CoreDataProperties.swift in Sources */,
+				2DD78505279C77C800B6DA63 /* Device+CoreDataProperties.swift in Sources */,
+				2DD78506279C77C800B6DA63 /* Source+CoreDataProperties.swift in Sources */,
 				2D90F0CC27484BD200BF9F80 /* SourceView.swift in Sources */,
 				2D0E5FFD2769230200C3EE10 /* ImportView.swift in Sources */,
 				2DD1BCE2270642410013BDD4 /* Extension.swift in Sources */,
 				2D214AFF266E0FD70098C78A /* healthKitShamanApp.swift in Sources */,
-				2DBA089E27778D3A0020BCC9 /* Device+CoreDataClass.swift in Sources */,
 				2D2D3789274825D8003E6BC5 /* DeviceModel.swift in Sources */,
+				2DD78504279C77C800B6DA63 /* Quantitytype+CoreDataClass.swift in Sources */,
+				2DD7850B279C77C800B6DA63 /* Source+CoreDataClass.swift in Sources */,
 				2D6216092737E03E006778B0 /* ViewModifiers.swift in Sources */,
-				2DBA08A027778D3A0020BCC9 /* Quantitytype+CoreDataClass.swift in Sources */,
 				2DCF6CB32711B63F00A8E4E8 /* ListHeaderView.swift in Sources */,
 				2D2D37982748295B003E6BC5 /* BaseServices.swift in Sources */,
-				2DBA089627778D3A0020BCC9 /* Aggregation+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

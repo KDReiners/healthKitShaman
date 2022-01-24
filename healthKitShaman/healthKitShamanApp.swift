@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-@main
+    @main
 struct healthKitShamanApp: App {
     
     @ObservedObject var logViewModel = LogModel()

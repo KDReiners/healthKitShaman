@@ -26,7 +26,11 @@ extension Binding where Value == NSNumber {
     static func bindFromNSNumber(detailObject: NSManagedObject, key: String) -> Binding<NSNumber> {
         return Binding(
             get: {
-                detailObject.value(forKey: key) as! NSNumber
+                if detailObject.value(forKey: key) != nil {
+                    return detailObject.value(forKey: key) as! NSNumber
+                } else {
+                    return 0 
+                }
             },
             set: {
                 detailObject.setValue($0, forKey: key)

@@ -29,7 +29,7 @@ struct listHeader: View {
                     ListHeaderView(text: stuffText(text:tree.value.log2quantitytype!.hk_quantitytype ?? ""), alignement: .bottomLeading, font: .body, foreGroundColor: .secondary)
                     ListHeaderView(text: tree.value.log2source?.hk_name ?? "", alignement: .center, font: .body, foreGroundColor: .secondary)
                     ListHeaderView(text: stuffText(text: tree.value.log2Device?.hk_name ?? ""), alignement: .center, font: .body, foreGroundColor: .secondary)
-                    ListHeaderView(text: "\(tree.value.value!)", alignement: .center, font: .body, foreGroundColor: .primary)
+                    ListHeaderView(text: "\(tree.value.value)", alignement: .center, font: .body, foreGroundColor: .primary)
                     ListHeaderView(text: tree.value.log2quantitytype!.preferredUnit ?? "", alignement: .center, font: .body, foreGroundColor: .secondary)
                 }
                 .frame(maxHeight: .infinity)
