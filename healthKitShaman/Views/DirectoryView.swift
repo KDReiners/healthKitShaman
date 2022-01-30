@@ -8,10 +8,10 @@
 import SwiftUI
 struct DirectoryView: View
 {
-    @EnvironmentObject var logViewModel: LogModel
-    @EnvironmentObject var quantityTypeViewModel: QuantityTypeModel
-    @EnvironmentObject var deviceViewModel: DeviceModel
-    @EnvironmentObject var sourceViewModel: SourceModel
+    @ObservedObject var logViewModel = LogModel()
+    @ObservedObject var quantityTypeViewModel = QuantityTypeModel()
+    @ObservedObject var deviceViewModel = DeviceModel()
+    @ObservedObject var sourceViewModel = SourceModel()
     @State private var isExpanded = true
     @State var select: NSManagedObject?
     var body: some View

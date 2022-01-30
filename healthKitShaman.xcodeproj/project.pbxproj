@@ -34,7 +34,6 @@
 		2D97AF1A2701029700E1CBA8 /* healthKitShamanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D97AF192701029700E1CBA8 /* healthKitShamanUITests.swift */; };
 		2D97AF1C2701029700E1CBA8 /* healthKitShamanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D97AF1B2701029700E1CBA8 /* healthKitShamanUITestsLaunchTests.swift */; };
 		2DBA089B27778D3A0020BCC9 /* healthKitConnector.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2DBA088F27778D390020BCC9 /* healthKitConnector.xcdatamodeld */; };
-		2DCF6CAB2711919200A8E4E8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF6CAA2711919200A8E4E8 /* ContentView.swift */; };
 		2DCF6CAD271193EF00A8E4E8 /* VariantTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF6CAC271193EF00A8E4E8 /* VariantTextFieldView.swift */; };
 		2DCF6CB32711B63F00A8E4E8 /* ListHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DCF6CB22711B63F00A8E4E8 /* ListHeaderView.swift */; };
 		2DD1BCE2270642410013BDD4 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DD1BCE1270642410013BDD4 /* Extension.swift */; };
@@ -106,7 +105,6 @@
 		2D97AF192701029700E1CBA8 /* healthKitShamanUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthKitShamanUITests.swift; sourceTree = "<group>"; };
 		2D97AF1B2701029700E1CBA8 /* healthKitShamanUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthKitShamanUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		2DBA089027778D390020BCC9 /* healthKitConnector.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = healthKitConnector.xcdatamodel; sourceTree = "<group>"; };
-		2DCF6CAA2711919200A8E4E8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2DCF6CAC271193EF00A8E4E8 /* VariantTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariantTextFieldView.swift; sourceTree = "<group>"; };
 		2DCF6CB22711B63F00A8E4E8 /* ListHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListHeaderView.swift; sourceTree = "<group>"; };
 		2DD1BCE1270642410013BDD4 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -251,7 +249,6 @@
 		2D2D37852748253E003E6BC5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2DCF6CAA2711919200A8E4E8 /* ContentView.swift */,
 				2D2D378627482578003E6BC5 /* LogModel.swift */,
 				2D2D3788274825D8003E6BC5 /* DeviceModel.swift */,
 				2D2D378A27482622003E6BC5 /* QuantityTypeModel.swift */,
@@ -489,7 +486,6 @@
 				2DBA089B27778D3A0020BCC9 /* healthKitConnector.xcdatamodeld in Sources */,
 				2D500D5B26C6F205001C7A84 /* Persistence.swift in Sources */,
 				2D2BBA0826E7E3AA009299E8 /* DirectoryView.swift in Sources */,
-				2DCF6CAB2711919200A8E4E8 /* ContentView.swift in Sources */,
 				2D0E5FFF276A6D0B00C3EE10 /* HKImporter.swift in Sources */,
 				2D2D37902748271F003E6BC5 /* Storage.swift in Sources */,
 				2D7FCD9626876977007C9FAF /* GroupView.swift in Sources */,
