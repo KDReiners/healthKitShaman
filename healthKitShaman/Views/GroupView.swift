@@ -32,6 +32,7 @@ struct listHeader: View {
                     ListHeaderView(text: "\(tree.value.value)", alignement: .center, font: .body, foreGroundColor: .primary)
                     ListHeaderView(text: tree.value.log2quantitytype!.preferredUnit ?? "", alignement: .center, font: .body, foreGroundColor: .secondary)
                 }
+            
                 .frame(maxHeight: .infinity)
                 .onChange(of: /*@START_MENU_TOKEN@*/"Value"/*@END_MENU_TOKEN@*/, perform: { value in
                     print("Hallo")
@@ -47,3 +48,4 @@ struct GroupView_Previews: PreviewProvider {
         GroupView(logViewModel: LogModel())
     }
 }
+
