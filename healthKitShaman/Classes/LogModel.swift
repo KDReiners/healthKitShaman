@@ -11,6 +11,8 @@ class LogModel: Model<Log> {
     @Published var categories: [Tree<Log>] = []
     @Published var sources = Array<Source>()
     @Published var devices = Array<Device>()
+    
+    internal var filterInterval: DateInterval!
     init() {
         let readOnlyFields = [""]
         super.init(readOnlyFields: readOnlyFields)
@@ -22,14 +24,30 @@ class LogModel: Model<Log> {
         set
         {
             result = newValue.sorted(by: { $1.timeStamp! > $0.timeStamp! })
-            fillCategories(items)
-            fillRelations()
+//            fillCategories(items)
+//            fillRelations()
         }
     }
-    private func fillCategories(_ logs: [Log]) {
+    internal func getLimits() -> DateInterval {
+        let startDate = (self.items.max(by: { x, y in x.timeStamp! > x.timeStamp! })?.timeStamp!)!
+        let endDate = (self.items.min(by: { x, y in x.timeStamp! > y.timeStamp! })?.timeStamp!)!
+        return DateInterval(start: startDate, end: endDate)
+    }
+    
+    internal func applyLimits() {
+        let filteredItems = self.items.filter { item in
+            if item.timeStamp! >= filterInterval.start && item.timeStamp! <= filterInterval.end {
+                return true
+            } else {
+                return false
+            }
+        }
+        fillCategories(filteredItems)
+    }
+    private func fillCategories(_ filteredLogs: [Log]) {
         self.categories.removeAll()
         var attachedLogs = [Log]()
-        let targetLogs = logs.filter{ log in
+        let targetLogs = filteredLogs.filter{ log in
             if let hk_quantitytype = log.log2quantitytype?.hk_quantitytype {
                 return (hk_quantitytype.contains("Glucose"))
             }
@@ -39,7 +57,7 @@ class LogModel: Model<Log> {
         }.sorted { $0.timeStamp! < $1.timeStamp!}
         targetLogs.forEach { log in
             var newTree = Tree(value: log, children: [Tree<Log>]())
-            let children = logs.filter { subLog in
+            let children = filteredLogs.filter { subLog in
                 return ( subLog.log2quantitytype?.hk_quantitytype != log.log2quantitytype?.hk_quantitytype
                             && subLog.timeStamp == log.timeStamp! && attachedLogs.contains(subLog) == false)
             }
@@ -52,15 +70,11 @@ class LogModel: Model<Log> {
             categories.append(newTree)
         }
     }
-    private func fillRelations() {
+    private func fillRelations(_ filteredLogs: [Log]) {
         var attachedSources = Set<Source>()
         var attachedQuantityTypes = Set<Quantitytype>()
         var attachedDevices = Set<Device>()
-//        items.forEach { log in
-//            print("Log Liste: \(log.uuid?.uuidString ?? "unbekannte uuid")")
-//        }
-//        print("*******************************")
-        items.forEach {log in
+        filteredLogs.forEach {log in
 //            print("Log Anfang: \(log.uuid?.uuidString ?? "unbekannte uuid")")
             if log.log2source != nil && log.log2quantitytype != nil && log.log2Device != nil {
                 attachedSources.insert(log.log2source!)
@@ -75,3 +89,4 @@ class LogModel: Model<Log> {
         self.devices = Array(attachedDevices.sorted(by: { $0.hk_name ?? "" < $1.hk_name ?? "" }))
     }
 }
+

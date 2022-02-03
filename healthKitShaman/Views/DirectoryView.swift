@@ -8,7 +8,6 @@
 import SwiftUI
 struct DirectoryView: View
 {
-    @ObservedObject var logViewModel = LogModel()
     @ObservedObject var quantityTypeViewModel = QuantityTypeModel()
     @ObservedObject var deviceViewModel = DeviceModel()
     @ObservedObject var sourceViewModel = SourceModel()
@@ -20,7 +19,7 @@ struct DirectoryView: View
             List
             {
                 DisclosureGroup("Loggings", isExpanded: $isExpanded) {
-                    NavigationLink("Logs", destination: GroupView(logViewModel: logViewModel))
+                    NavigationLink("Logs", destination: GroupView())
                         .disclosureElementStyle()
                 }
                 .disclosureGroupStyle()
