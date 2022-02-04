@@ -29,9 +29,12 @@ class LogModel: Model<Log> {
         }
     }
     internal func getLimits() -> DateInterval {
-        let startDate = (self.items.max(by: { x, y in x.timeStamp! > x.timeStamp! })?.timeStamp!)!
-        let endDate = (self.items.min(by: { x, y in x.timeStamp! > y.timeStamp! })?.timeStamp!)!
-        return DateInterval(start: startDate, end: endDate)
+        if self.items.count>0 {
+            let startDate = (self.items.max(by: { x, y in x.timeStamp! > x.timeStamp! })?.timeStamp!)!
+            let endDate = (self.items.min(by: { x, y in x.timeStamp! > y.timeStamp! })?.timeStamp!)!
+            return DateInterval(start: startDate, end: endDate)
+        }
+        return DateInterval(start: Date(), end: Date())
     }
     
     internal func applyLimits() {
@@ -43,6 +46,7 @@ class LogModel: Model<Log> {
             }
         }
         fillCategories(filteredItems)
+        fillRelations(filteredItems)
     }
     private func fillCategories(_ filteredLogs: [Log]) {
         self.categories.removeAll()

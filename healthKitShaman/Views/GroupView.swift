@@ -131,7 +131,7 @@ struct GroupView: View {
                 ListHeaderView(text: stuffText(text: tree.value.log2Device?.hk_name ?? ""), alignement: .center, font: .body, foreGroundColor: .secondary)
                 ListHeaderView(text: "\(tree.value.value)", alignement: .center, font: .body, foreGroundColor: .primary)
                 ListHeaderView(text: tree.value.log2quantitytype!.preferredUnit ?? "", alignement: .center, font: .body, foreGroundColor: .secondary)
-            }
+            }   
             .frame(maxHeight: .infinity)
         }
     }
