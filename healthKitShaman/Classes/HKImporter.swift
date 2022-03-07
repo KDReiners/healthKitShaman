@@ -9,6 +9,7 @@
 
 import Foundation
 import CoreData
+import healthKitPackage
 
 extension CustomStringConvertible {
     var description : String {
@@ -48,7 +49,7 @@ class HKRecord: CustomStringConvertible {
     var metadata: [String:String]?
 }
 
-class HKimporter : NSObject, XMLParserDelegate {
+/*class HKimporter : NSObject, XMLParserDelegate {
 
     let moc = PersistenceController.shared.localContainer.viewContext
     var allHKRecords: [HKRecord] = []
@@ -157,3 +158,4 @@ class HKimporter : NSObject, XMLParserDelegate {
         try? moc.save()
     }
 }
+*/

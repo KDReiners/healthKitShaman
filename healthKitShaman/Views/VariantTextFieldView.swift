@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import healthKitPackage
 
 struct VariantTextFieldView<T>: View  where T: GenericViewModel {
     @State var anyNumber = 0

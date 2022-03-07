@@ -39,9 +39,11 @@ struct ImportView_Previews: PreviewProvider {
     }
 }
 func importXML(path: URL) -> Void {
+    /*
     let dataImporter = HKimporter()
     if let parser = XMLParser(contentsOf: path) {
         parser.delegate = dataImporter
         parser.parse()
     }
+     */
 }

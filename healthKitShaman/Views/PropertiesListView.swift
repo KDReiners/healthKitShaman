@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import healthKitPackage
 
 struct PropertiesListView <T>: View where T: GenericViewModel {
     @ObservedObject var detailObject: T

@@ -7,6 +7,8 @@
 
 import SwiftUI
 import Combine
+import healthKitPackage
+
 enum aggregationStyle {
     case D
     case W

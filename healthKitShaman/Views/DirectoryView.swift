@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import healthKitPackage
+
 struct DirectoryView: View
 {
     @ObservedObject var quantityTypeViewModel = QuantityTypeModel()
