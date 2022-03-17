@@ -107,6 +107,7 @@ struct CalendarView: View {
 }
 struct GroupView: View {
     @ObservedObject var logViewModel = LogModel()
+    @ObservedObject var addendumViewModel = AddendumModel()
     var limitInterval: DateInterval!
     var filterInterval: DateInterval!
     @State var dateFrom: Date?
