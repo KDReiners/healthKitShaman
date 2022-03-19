@@ -107,12 +107,23 @@ struct CalendarView: View {
 }
 struct GroupView: View {
     @ObservedObject var logViewModel = LogModel()
-    @ObservedObject var addendumViewModel = AddendumModel()
+//    @ObservedObject var addendumViewModel = AddendumModel()
+//    @ObservedObject var addendumTypeViewModel = AddendumTypeModel()
+    
     var limitInterval: DateInterval!
     var filterInterval: DateInterval!
     @State var dateFrom: Date?
     @State var dateTo: Date?
     init() {
+//        let addendum = addendumViewModel.insertRecord()
+//        addendum.name = "Butter"
+//        addendumViewModel.items.append(addendum)
+//        addendumViewModel.saveChanges()
+//        let type = addendumTypeViewModel.insertRecord()
+//        type.name = "nutrition"
+//        addendumTypeViewModel.items.append(type)
+//        addendumTypeViewModel.saveChanges()
+        
         limitInterval = self.logViewModel.getLimits()
         if dateFrom == nil {
             let startDate = Calendar.current.date(byAdding: .weekOfYear, value: -1, to: limitInterval.end)!
