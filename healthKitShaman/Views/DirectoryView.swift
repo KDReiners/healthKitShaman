@@ -13,6 +13,7 @@ struct DirectoryView: View
     @ObservedObject var quantityTypeViewModel = QuantityTypeModel()
     @ObservedObject var deviceViewModel = DeviceModel()
     @ObservedObject var sourceViewModel = SourceModel()
+    @ObservedObject var addendumTypeViewModel = AddendumTypeModel()
     @State private var isExpanded = true
     @State var select: NSManagedObject?
     var body: some View
@@ -46,8 +47,14 @@ struct DirectoryView: View
                         NavigationLink(sourceViewModel.items[i].hk_name ?? "", destination: PropertiesListView(detailObject: sourceViewModel, recordIndex: i), tag: sourceViewModel.items[i], selection: $select)
                     }
                 }
+                DisclosureGroup("AddendumTypes", isExpanded: $isExpanded) {
+                    ForEach(0..<addendumTypeViewModel.items.count, id: \.self) { i in
+                        NavigationLink(addendumTypeViewModel.items[i].name ?? "", destination: DataNavigatorView(detailObject: addendumTypeViewModel, recordIndex: i), tag: addendumTypeViewModel.items[i], selection: $select)
+                        
+                    }
+                }
                 DisclosureGroup("Data Manager", isExpanded: $isExpanded) {
-                    NavigationLink("Xml-Import", destination: ImportView())
+                    NavigationLink("Libre-Import", destination: ImportView())
                 }
                 
             }

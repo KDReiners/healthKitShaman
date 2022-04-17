@@ -12,8 +12,8 @@ import healthKitPackage
 enum aggregationStyle {
     case D
     case W
-//    case M
-//    case J
+    case M
+    case Y
 }
 struct listHeader: View {
     var body: some View {
@@ -53,12 +53,10 @@ struct CalendarView: View {
                 setFilter(aggregationStyle: .W, index: 1)
             }.buttonStyle(FilledButton(isSelected: selectedButtons[1]))
             Button("M") {
-                deactivate(skipIndex: 2)
-                selectedButtons[2].toggle()
+                setFilter(aggregationStyle: .M, index: 2)
             }.buttonStyle(FilledButton(isSelected: selectedButtons[2]))
             Button("J") {
-                deactivate(skipIndex: 3)
-                selectedButtons[3].toggle()
+                setFilter(aggregationStyle: .Y, index: 3)
             }.buttonStyle(FilledButton(isSelected: selectedButtons[3]))
         }.onAppear { trackScrollWheel() }
     }
@@ -68,14 +66,17 @@ struct CalendarView: View {
             selectedButtons[index].toggle()
             switch aggregationStyle {
             case .D:
-                logViewModel.filterInterval = DateInterval(start: logViewModel.filterInterval.end, end: logViewModel.filterInterval.end )
+                let startDate =  Calendar.current.date(byAdding: .day, value: -1, to: logViewModel.filterInterval.end)
+                logViewModel.filterInterval = DateInterval(start: startDate!, end: logViewModel.filterInterval.end )
             case .W:
                 let startDate = Calendar.current.date(byAdding: .weekOfYear, value: -1, to: logViewModel.filterInterval.end)!
                 logViewModel.filterInterval = DateInterval(start: startDate, end: logViewModel.filterInterval.end)
-    //        case .M:
-    //            <#code#>
-    //        case .J:
-    //            <#code#>
+            case .M:
+                let startDate = Calendar.current.date(byAdding: .month, value: -1, to:logViewModel.filterInterval.end)!
+                logViewModel.filterInterval = DateInterval(start: startDate, end: logViewModel.filterInterval.end)
+            case .Y:
+                let startDate = Calendar.current.date(byAdding: .year, value: -1, to: logViewModel.filterInterval.end)!
+                logViewModel.filterInterval = DateInterval(start: startDate, end: logViewModel.filterInterval.end)
             }
         }
         logViewModel.applyLimits()

@@ -18,8 +18,10 @@
 		2D2BBA0826E7E3AA009299E8 /* DirectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2BBA0726E7E3AA009299E8 /* DirectoryView.swift */; };
 		2D2D379C27482A70003E6BC5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2D379B27482A70003E6BC5 /* Constants.swift */; };
 		2D6216092737E03E006778B0 /* ViewModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D6216082737E03E006778B0 /* ViewModifiers.swift */; };
+		2D6994FE27F78FC4005098A7 /* CSV in Frameworks */ = {isa = PBXBuildFile; productRef = 2D6994FD27F78FC4005098A7 /* CSV */; };
 		2D7FCD9626876977007C9FAF /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D7FCD9526876977007C9FAF /* GroupView.swift */; };
 		2D822591272FEA5900E1B556 /* PropertiesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D822590272FEA5800E1B556 /* PropertiesListView.swift */; };
+		2D856A7128034AB400FF9A8E /* DataNavigatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D856A7028034AB400FF9A8E /* DataNavigatorView.swift */; };
 		2D97AF0D2701024500E1CBA8 /* healthKitShamanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D97AF0C2701024500E1CBA8 /* healthKitShamanTests.swift */; };
 		2D97AF1A2701029700E1CBA8 /* healthKitShamanUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D97AF192701029700E1CBA8 /* healthKitShamanUITests.swift */; };
 		2D97AF1C2701029700E1CBA8 /* healthKitShamanUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D97AF1B2701029700E1CBA8 /* healthKitShamanUITestsLaunchTests.swift */; };
@@ -68,6 +70,7 @@
 		2D6216082737E03E006778B0 /* ViewModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifiers.swift; sourceTree = "<group>"; };
 		2D7FCD9526876977007C9FAF /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		2D822590272FEA5800E1B556 /* PropertiesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesListView.swift; sourceTree = "<group>"; };
+		2D856A7028034AB400FF9A8E /* DataNavigatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataNavigatorView.swift; sourceTree = "<group>"; };
 		2D97AF0A2701024500E1CBA8 /* healthKitShamanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = healthKitShamanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D97AF0C2701024500E1CBA8 /* healthKitShamanTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthKitShamanTests.swift; sourceTree = "<group>"; };
 		2D97AF172701029700E1CBA8 /* healthKitShamanUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = healthKitShamanUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DDFFAF627514B9100539C25 /* CreateML.framework in Frameworks */,
+				2D6994FE27F78FC4005098A7 /* CSV in Frameworks */,
 				2DDFFAF427514B7C00539C25 /* CoreML.framework in Frameworks */,
 				2D19521127D5267700CF88F6 /* healthKitPackage in Frameworks */,
 				2D214B76266E161E0098C78A /* CloudKit.framework in Frameworks */,
@@ -121,6 +125,7 @@
 				2D822590272FEA5800E1B556 /* PropertiesListView.swift */,
 				2D6216082737E03E006778B0 /* ViewModifiers.swift */,
 				2D0E5FFC2769230200C3EE10 /* ImportView.swift */,
+				2D856A7028034AB400FF9A8E /* DataNavigatorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 			name = healthKitShaman;
 			packageProductDependencies = (
 				2D19521027D5267700CF88F6 /* healthKitPackage */,
+				2D6994FD27F78FC4005098A7 /* CSV */,
 			);
 			productName = healthKitShaman;
 			productReference = 2D214AFB266E0FD70098C78A /* healthKitShaman.app */;
@@ -350,6 +356,7 @@
 			mainGroup = 2D214AF2266E0FD70098C78A;
 			packageReferences = (
 				2D19520F27D5267700CF88F6 /* XCRemoteSwiftPackageReference "healthKitPackage" */,
+				2D6994FC27F78FC3005098A7 /* XCRemoteSwiftPackageReference "CSV" */,
 			);
 			productRefGroup = 2D214AFC266E0FD70098C78A /* Products */;
 			projectDirPath = "";
@@ -405,6 +412,7 @@
 				2DD1BCE2270642410013BDD4 /* Extension.swift in Sources */,
 				2D214AFF266E0FD70098C78A /* healthKitShamanApp.swift in Sources */,
 				2D6216092737E03E006778B0 /* ViewModifiers.swift in Sources */,
+				2D856A7128034AB400FF9A8E /* DataNavigatorView.swift in Sources */,
 				2DCF6CB32711B63F00A8E4E8 /* ListHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -751,6 +759,14 @@
 				kind = branch;
 			};
 		};
+		2D6994FC27F78FC3005098A7 /* XCRemoteSwiftPackageReference "CSV" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yaslab/CSV.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -758,6 +774,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2D19520F27D5267700CF88F6 /* XCRemoteSwiftPackageReference "healthKitPackage" */;
 			productName = healthKitPackage;
+		};
+		2D6994FD27F78FC4005098A7 /* CSV */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2D6994FC27F78FC3005098A7 /* XCRemoteSwiftPackageReference "CSV" */;
+			productName = CSV;
 		};
 /* End XCSwiftPackageProductDependency section */
 

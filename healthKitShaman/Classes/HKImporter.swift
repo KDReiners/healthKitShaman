@@ -10,152 +10,40 @@
 import Foundation
 import CoreData
 import healthKitPackage
-
-extension CustomStringConvertible {
-    var description : String {
-        var description: String = ""
-        //if self is AnyObject {
-        //    description = "***** \(type(of: self)) - <\(unsafeAddressOf((self as AnyObject)))>***** \n"
-        //} else {
-        description = "***** \(type(of: self)) *****\n"
-        //}
-        let selfMirror = Mirror(reflecting: self)
-        for child in selfMirror.children {
-            if let propertyName = child.label {
-                description += "\(propertyName): \(child.value)\n"
+import CSV
+struct HKImporter {
+    init(url: URL)
+    {
+        let libreViewModel = Libre3Model()
+        libreViewModel.deleteAllRecords()
+        var rowCount = 0
+        let stream = InputStream(fileAtPath: url.path)
+        let reader = try! CSVReader(stream: stream!)
+        while let row = reader.next() {
+            if rowCount > 1 {
+                let entry = libreViewModel.insertRecord()
+                entry.carbohydratesservings = Int16(row[10]) ?? 0
+                entry.carbohydratesunits = Int16(row[9]) ?? 0
+                entry.correctioninsulinunits = Int16(row[17]) ?? 0
+                entry.depotinsulinunits = Int16(row[12]) ?? 0
+                entry.device = row[0]
+                entry.devicetimestamp = BaseServices.convertToStandardDate(dateString: row[2])
+                entry.glucosescan = Double(row[5]) ?? 0
+                entry.glucosespathway = Double(row[4]) ?? 0
+                entry.glucoseteststrips = Int16(row[14]) ?? 0
+                entry.insulinchangebyuserUnits = Int16(row[18]) ?? 0
+                entry.ketoneunits = Int16(row[15]) ?? 0
+                entry.mealinsulinunits = Int16(row[16]) ?? 0
+                entry.nonnumericdepotinsulin = Bool(row[11]) ?? false
+                entry.nonnumericfooddata = Bool(row [8]) ?? false
+                entry.nonnumericrapidactinginsulin = Bool(row[6]) ?? false
+                entry.notes = row[13]
+                entry.rapidactinginsulin = Int16(row[7]) ?? 0
+                entry.recordingtype = Int16(row[3]) ?? -1
+                entry.serialnumber = row[1]
             }
+            rowCount+=1
         }
-        return description
+        libreViewModel.saveChanges()
     }
 }
-
-class HKRecord: CustomStringConvertible {
-    var type: String = String()
-    var value: Double = 0
-    var unit: String?
-    var sourceName: String = String()
-    var sourceVersion: String = String()
-    var startDate: Date = Date()
-    var endDate: Date = Date()
-    var creationDate: Date = Date()
-    
-    //for workouts
-    var activityType: String = String()
-    var totalEnergyBurned: Double = 0
-    var totalDistance: Double = 0
-    var totalEnergyBurnedUnit: String = String()
-    var totalDistanceUnit: String = String()
-
-    var metadata: [String:String]?
-}
-
-/*class HKimporter : NSObject, XMLParserDelegate {
-
-    let moc = PersistenceController.shared.localContainer.viewContext
-    var allHKRecords: [HKRecord] = []
-    
-    var eName: String = String()
-    var currRecord: HKRecord = HKRecord.init()
-    
-
-    
-    
-    convenience init(completion:@escaping ()->Void) {
-        self.init()
-    }
-
-    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
-        eName = elementName
-        if elementName == "Record" {
-            currRecord.type = attributeDict["type"]!
-            currRecord.sourceName = attributeDict["sourceName"] ??  ""
-            currRecord.sourceVersion = attributeDict["sourceVersion"] ??  ""
-            currRecord.value = Double(attributeDict["value"] ?? "0") ?? 0
-            currRecord.unit = attributeDict["unit"] ?? ""
-            
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd hh:mm:ss Z"
-            if let date = formatter.date(from: attributeDict["startDate"]!) {
-                currRecord.startDate = date
-            }
-            if let date = formatter.date(from: attributeDict["endDate"]!){
-                currRecord.endDate = date
-            }
-            
-            if currRecord.startDate >  currRecord.endDate {
-                currRecord.startDate = currRecord.endDate
-            }
-            
-            if let date = formatter.date(from: attributeDict["creationDate"]!){
-                currRecord.creationDate = date
-            }
-        } else if elementName == "MetadataEntry" {
-            currRecord.metadata = attributeDict
-        } else if elementName == "Workout" {
-            print(attributeDict)
-            currRecord.type = "" //HKObjectType.workoutType().identifier
-            currRecord.activityType = "" //activityByName(activityName: attributeDict["workoutActivityType"] ?? "")
-            currRecord.sourceName = attributeDict["sourceName"] ??  ""
-            currRecord.sourceVersion = attributeDict["sourceVersion"] ??  ""
-            currRecord.value = Double(attributeDict["duration"] ?? "0") ?? 0
-            currRecord.unit = attributeDict["durationUnit"] ?? ""
-            currRecord.totalDistance = Double(attributeDict["totalDistance"] ?? "0") ?? 0
-            currRecord.totalDistanceUnit = attributeDict["totalDistanceUnit"] ??  ""
-            currRecord.totalEnergyBurned = Double(attributeDict["totalEnergyBurned"] ?? "0") ?? 0
-            currRecord.totalEnergyBurnedUnit = attributeDict["totalEnergyBurnedUnit"] ??  ""
-            
-            let formatter = DateFormatter()
-            formatter.dateFormat = "yyyy-MM-dd hh:mm:ss Z"
-            if let date = formatter.date(from: attributeDict["startDate"]!) {
-                currRecord.startDate = date
-            }
-            if let date = formatter.date(from: attributeDict["endDate"]!){
-                currRecord.endDate = date
-            }
-            
-            if currRecord.startDate >  currRecord.endDate {
-                currRecord.startDate = currRecord.endDate
-            }
-            
-            if let date = formatter.date(from: attributeDict["creationDate"]!){
-                currRecord.creationDate = date
-            }
-        } else if elementName == "Correlation" {
-            return
-        } else {
-            return
-        }
-    }
-    
-    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-        if elementName == "Record" || elementName == "Workout" {
-            allHKRecords.append(currRecord)
-            print(allHKRecords.count)
-//            storeInPrimaNota(input: currRecord)
-//            print(currRecord.description)
-            DispatchQueue.main.async {
-//                self.readCounterLabel?.text = "\(self.allHKRecords.count)"
-            }
-           /*saveHKRecord(item: currRecord, withSuccess: {
-                // success
-                //print("record added to array")
-            }, failure: {
-                // fail
-                print("fail to process record")
-            }) */
-        }
-    }
-    func storeInPrimaNota(input: HKRecord) -> Void {
-        let entry = PrimaNota(context: moc)
-        entry.type = input.type
-        entry.value = input.value
-        entry.unit = input.unit
-        entry.sourceName = input.sourceName
-        entry.sourceVersion = input.sourceVersion
-        entry.startDate = input.startDate
-        entry.endDate = input.endDate
-        entry.creationDate = input.creationDate
-        try? moc.save()
-    }
-}
-*/

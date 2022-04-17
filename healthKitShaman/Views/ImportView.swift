@@ -6,12 +6,12 @@
 //
 
 import SwiftUI
+import healthKitPackage
 
 struct ImportView: View {
     @State var filename = "Filename"
     @State var url: URL!
     @State var showFileChooser = false
-
      var body: some View {
        HStack {
            Text(filename)
@@ -26,7 +26,10 @@ struct ImportView: View {
                }
              }
            Button("Import") {
-               importXML(path: self.url)
+               importLibre(path: self.url)
+           }
+           Button("AttachToAddendum") {
+               var viewModel = AddendumModel()
            }
        }
        .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -38,12 +41,6 @@ struct ImportView_Previews: PreviewProvider {
         ImportView()
     }
 }
-func importXML(path: URL) -> Void {
-    /*
-    let dataImporter = HKimporter()
-    if let parser = XMLParser(contentsOf: path) {
-        parser.delegate = dataImporter
-        parser.parse()
-    }
-     */
+func importLibre(path: URL) -> Void {
+    HKImporter.init(url: path)
 }
