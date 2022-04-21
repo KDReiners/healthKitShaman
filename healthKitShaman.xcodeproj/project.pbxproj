@@ -10,7 +10,6 @@
 		2D06C63E26BC55A000B4C57C /* ViewBaseFoundation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D06C63D26BC55A000B4C57C /* ViewBaseFoundation.swift */; };
 		2D0E5FFD2769230200C3EE10 /* ImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E5FFC2769230200C3EE10 /* ImportView.swift */; };
 		2D0E5FFF276A6D0B00C3EE10 /* LibreViewImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0E5FFE276A6D0B00C3EE10 /* LibreViewImporter.swift */; };
-		2D155ADA280DD79D00A5E243 /* Tardis.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D155AD9280DD79D00A5E243 /* Tardis.swift */; };
 		2D19521127D5267700CF88F6 /* healthKitPackage in Frameworks */ = {isa = PBXBuildFile; productRef = 2D19521027D5267700CF88F6 /* healthKitPackage */; };
 		2D214AFF266E0FD70098C78A /* healthKitShamanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D214AFE266E0FD70098C78A /* healthKitShamanApp.swift */; };
 		2D214B03266E0FDA0098C78A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D214B02266E0FDA0098C78A /* Assets.xcassets */; };
@@ -55,7 +54,6 @@
 		2D06C63D26BC55A000B4C57C /* ViewBaseFoundation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewBaseFoundation.swift; sourceTree = "<group>"; };
 		2D0E5FFC2769230200C3EE10 /* ImportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImportView.swift; sourceTree = "<group>"; };
 		2D0E5FFE276A6D0B00C3EE10 /* LibreViewImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibreViewImporter.swift; sourceTree = "<group>"; };
-		2D155AD9280DD79D00A5E243 /* Tardis.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tardis.swift; sourceTree = "<group>"; };
 		2D214AFB266E0FD70098C78A /* healthKitShaman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = healthKitShaman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D214AFE266E0FD70098C78A /* healthKitShamanApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = healthKitShamanApp.swift; sourceTree = "<group>"; };
 		2D214B02266E0FDA0098C78A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -212,7 +210,6 @@
 			isa = PBXGroup;
 			children = (
 				2D0E5FFE276A6D0B00C3EE10 /* LibreViewImporter.swift */,
-				2D155AD9280DD79D00A5E243 /* Tardis.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -414,7 +411,6 @@
 				2D0E5FFD2769230200C3EE10 /* ImportView.swift in Sources */,
 				2DD1BCE2270642410013BDD4 /* Extension.swift in Sources */,
 				2D214AFF266E0FD70098C78A /* healthKitShamanApp.swift in Sources */,
-				2D155ADA280DD79D00A5E243 /* Tardis.swift in Sources */,
 				2D6216092737E03E006778B0 /* ViewModifiers.swift in Sources */,
 				2D856A7128034AB400FF9A8E /* DataNavigatorView.swift in Sources */,
 				2DCF6CB32711B63F00A8E4E8 /* ListHeaderView.swift in Sources */,
