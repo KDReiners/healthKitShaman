@@ -29,7 +29,7 @@ struct ImportView: View {
                importLibre(path: self.url)
            }
            Button("AttachToAddendum") {
-               var viewModel = AddendumModel()
+              var test = TimeLord(resolution: 60, logKey: "deviceTimeStamp", model: Libre3Model())
            }
        }
        .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -42,5 +42,5 @@ struct ImportView_Previews: PreviewProvider {
     }
 }
 func importLibre(path: URL) -> Void {
-    HKImporter.init(url: path)
+    LibreViewImporter.init(url: path)
 }

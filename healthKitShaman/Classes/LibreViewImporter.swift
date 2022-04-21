@@ -11,7 +11,7 @@ import Foundation
 import CoreData
 import healthKitPackage
 import CSV
-struct HKImporter {
+struct LibreViewImporter {
     init(url: URL)
     {
         let libreViewModel = Libre3Model()
