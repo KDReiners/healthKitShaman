@@ -29,7 +29,7 @@ struct ImportView: View {
                importLibre(path: self.url)
            }
            Button("AttachToAddendum") {
-               var test = AddendumTimeCapsules(resolution: 3600)
+               var test = Libre3TimeCapsules(resolution: 3600, quantityType: "")
            }
        }
        .frame(maxWidth: .infinity, maxHeight: .infinity)
