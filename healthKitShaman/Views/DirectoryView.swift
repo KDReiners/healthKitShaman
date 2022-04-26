@@ -49,7 +49,7 @@ struct DirectoryView: View
                 }
                 DisclosureGroup("AddendumTypes", isExpanded: $isExpanded) {
                     ForEach(0..<addendumTypeViewModel.items.count, id: \.self) { i in
-                        NavigationLink(addendumTypeViewModel.items[i].name ?? "", destination: DataNavigatorView(detailObject: addendumTypeViewModel, recordIndex: i), tag: addendumTypeViewModel.items[i], selection: $select)
+                        NavigationLink(addendumTypeViewModel.items[i].name ?? "", destination: DataNavigatorView(masterObject: addendumTypeViewModel, detailObject: AddendumTimeCapsules(resolution: 3600), recordIndex: i), tag: addendumTypeViewModel.items[i], selection: $select)
                         
                     }
                 }
