@@ -18,7 +18,7 @@ struct DataNavigatorView <T1, T2>: View where T1: GenericViewModel, T2: GenericT
         self.recordIndex = recordIndex
         self.slices = detailObject.slices as! Array<Slice>
         self.slices = slices.filter { slice in
-            return slice.quantityType == "Nutrition"
+            return slice.quantityType == (masterObject.items[recordIndex] as! NSManagedObject).value(forKey: "name") as! String
         }
     }
     var body: some View {
@@ -27,10 +27,10 @@ struct DataNavigatorView <T1, T2>: View where T1: GenericViewModel, T2: GenericT
             }
             Divider()
             VStack {
-                ForEach(1..<detailObject.slices.count, id:\.self) { i in
+                ForEach(1..<slices.count, id:\.self) { i in
                     HStack {
-                        Text(($detailObject.slices[i].wrappedValue as! Slice).quantityType)
-                        Text(BaseServices.standardDateFormatter.string(from:($detailObject.slices[i].wrappedValue as! Slice).logDate))
+                        Text(slices[i].quantityType)
+                        Text(BaseServices.standardDateFormatter.string(from:slices[i].logDate))
                     }
                     
                 }
