@@ -30,7 +30,7 @@ struct DirectoryView: View
                     ForEach(0..<quantityTypeViewModel.items.count, id: \.self) {
                         i in
 
-                        NavigationLink(quantityTypeViewModel.items[i].hk_quantitytype ?? "", destination: PropertiesListView(detailObject: quantityTypeViewModel, recordIndex: i), tag: quantityTypeViewModel.items[i], selection: $select)
+                        NavigationLink(stuffText(text:quantityTypeViewModel.items[i].hk_quantitytype ?? ""), destination: PropertiesListView(detailObject: quantityTypeViewModel, recordIndex: i), tag: quantityTypeViewModel.items[i], selection: $select)
                     }
                     .disclosureElementStyle()
                 }

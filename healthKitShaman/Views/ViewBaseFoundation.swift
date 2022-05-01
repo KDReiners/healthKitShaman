@@ -15,7 +15,7 @@ let TextFieldWidth: CGFloat = 250
 let isEditing: Bool = false
 
 extension View {
-    public func setFrame(text: Text?, alignement: Alignment, font: Font, foreGroundColor: Color) -> some View {
+    public func setFrame(text: Text?, alignement: Alignment, font: Font, foreGroundColor: Color, textWidth: CGFloat = 150) -> some View {
         let result = text.frame(width: textWidth, alignment: alignement).lineLimit(1)
         return result
     }

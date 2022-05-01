@@ -44,7 +44,9 @@ struct PropertiesListView <T>: View where T: GenericViewModel {
                     }
                 }
             }
-            DataNavigatorView(masterObject: detailObject, detailObject: LogTimeCapsules(resolution: 3600, quantityType: (detailObject.items[recordIndex] as! NSManagedObject).value(forKey: "hk_quantitytype") as! String), recordIndex: recordIndex, childrenRelationKey: "quantitytype")
+            Divider()
+            DataNavigatorView(masterObject: detailObject, detailObject: LogTimeCapsules(resolution: 3600, quantityType: (detailObject.items[recordIndex] as! NSManagedObject).value(forKey: "hk_quantitytype") as! String), recordIndex: recordIndex, childrenRelationKey: "hk_quantitytype")
+            
         }
     }
 }
