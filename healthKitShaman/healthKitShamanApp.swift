@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import healthKitPackage
 
 @main
 struct healthKitShamanApp: App {
@@ -26,6 +27,13 @@ struct healthKitShamanApp: App {
         }
     }
     func createMl() -> Void {
+        Task {
+            BaseServices.gatherAllLoggings(resolution: 3600, completion: { (success) -> Void in
+                if success {
+                    print("all is ready")
+                }
+            })
+        }
         			
     }
 }

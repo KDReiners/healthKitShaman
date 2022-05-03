@@ -45,24 +45,7 @@ struct DataNavigatorView <T1, T2>: View where T1: GenericViewModel, T2: GenericT
 struct valueField: View {
     var value: Any
     var body: some View {
-        Text(tryCast(_: value))
-    }
-    func tryCast(_ val:Any) -> String {
-        let valueFormatter: NumberFormatter = {
-            let formatter = NumberFormatter()
-            formatter.numberStyle = .decimal
-            formatter.minimumFractionDigits = 2
-            formatter.maximumFractionDigits = 2
-                return formatter
-            }()
-        switch val {
-        case is String, is NSString:
-            return val as! String
-        case is Int, is Double:
-            return valueFormatter.string(from: val as! NSNumber)!
-        default:
-            return ""
-        }
+        Text(BaseServices.tryCast(_: value))
     }
 }
 struct DataNavigatorView_Previews: PreviewProvider {
